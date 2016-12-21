@@ -1,3 +1,9 @@
 <h1>
   {{title}}
 </h1>
+
+<a uiSref="app.admin" [uiOptions]="{ inherit: false }" uiSrefActive="active">Admin</a>
+
+<ui-view></ui-view>
+
+<ui-view name="footer"></ui-view>
