@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 
 import { MAIN_STATES } from "./app.states";
 import { AppComponent } from './app.component';
+import { AdminModule } from './admin/admin.module';
+import { CustomerModule } from './customer/customer.module';
 import { MyRootUIRouterConfig } from "./router.config";
 
 @NgModule({
@@ -22,6 +24,8 @@ import { MyRootUIRouterConfig } from "./router.config";
       useHash: false,
       configClass: MyRootUIRouterConfig
     }),
+    AdminModule,
+    CustomerModule
   ],
   providers: [
     { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader },

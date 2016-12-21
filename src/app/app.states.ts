@@ -8,5 +8,5 @@ export let MAIN_STATES: Ng2StateDeclaration[] = [
     { name: 'app', component: AppComponent },
 
     // This is the Future State for lazy loading the BazModule
-    { name: 'app.admin', url: '/admin', lazyLoad: loadNgModule('src/app/admin/admin.module') }
+    //{ name: 'app.admin', url: '/admin', lazyLoad: loadNgModule('src/app/admin/admin.module') }
 ];
