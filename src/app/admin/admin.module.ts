@@ -8,6 +8,8 @@ import { AdminHeaderComponent } from "./admin.header.component";
 import { AdminFooterComponent } from "./admin.footer.component";
 import { Nest1Component } from "./nest1.component";
 import { Nest2Component } from "./nest2.component";
+import { AdminService } from './admin.service';
+
 
 @NgModule({
   imports: [
@@ -21,6 +23,7 @@ import { Nest2Component } from "./nest2.component";
     AdminFooterComponent,
     Nest1Component,
     Nest2Component
-  ]
+  ],
+  providers: [AdminService]
 })
 export class AdminModule { }

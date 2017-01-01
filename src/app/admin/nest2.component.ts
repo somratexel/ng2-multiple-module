@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-
+import { AdminService } from './admin.service';
 /**
  * This component demonstrates use of the '#' state parameter, which updates the url hash.
  * The '#' parameter is implicitly available.
@@ -9,7 +9,7 @@ import {Component} from '@angular/core';
  */
 let template = `
 <h5>Nest 2 component</h5>
-
+<pre>{{adminData | json}}</pre>
 <a uiSref="." [uiParams]="{ '#': 'asdf' }" uiSrefActive="active" >anchor asdf</a> <br>
 <a uiSref="." [uiParams]="{ '#': 'fhqwhgads' }" uiSrefActive="active" >anchor fhqwhgads</a>
 `;
@@ -18,4 +18,10 @@ let template = `
   selector: 'nest1',
   template: template
 })
-export class Nest2Component { }
+export class Nest2Component { 
+	private adminData;
+	constructor(private adminservice: AdminService){
+		this.adminData = this.adminservice.getAdmin();
+	}
+
+}
